@@ -1,0 +1,134 @@
+2018.10.21 13:30:
+3 x features, 7 interval fearures, no care about missing F points,
+all based on delineation of QRST, no averaging. 
+edb_eliminate_inverted, ST 107256 and normal 95218.
+total: (202474, 10)
+X_train: (182226, 9)
+X_test: (20248, 9)
+y_train: (182226,)
+y_test(20248,)
+Accuracy: SVM, 0.8666534966416436; KNN(5), 0.86255432635322
+
+2018.10.22 22:58
+Assign average values to missing F points, 3 x features, 7 morphological fearures based on delineation,
+all based on delineation of QRST, all average by successive 5 points.
+ST 26916 and normal 21578.
+(48494, 11)
+(43644, 10) (4850, 10) (43644,) (4850,)
+SVM, 0.8964948453608247; KNN(5), 0.8837113402061856
+
+2018.10.24 18:38
+Assign average values to missing F points, 3 x features, 7 morphological fearures based on delineation,
+12 morphological features without delineation, all averaging
+ST 26916 and normal 21578.
+(48494, 23)
+(43644, 22) (4850, 22) (43644,) (4850,)
+SVM, 0.8929896907216495; KNN(5), 0.8791752577319588
+
+2018.10.24 21:17
+12 morphological features without delineation, all averaging
+ST 26916 and normal 21806.
+(48722, 13)
+(43849, 12) (4873, 12) (43849,) (4873,)
+KNN(5), 0.5577672891442643
+
+2018.10.25 11.00
+Assign average values to missing F points, 3 x features, 12 morphological features without delineation, all averaging
+ST 26916 and normal 21806.
+(48722, 16)
+(43849, 15) (4873, 15) (43849,) (4873,)
+SVM, 0.7617484096039401; KNN(5), 0.7629796839729119
+
+2018.10.25 13:30
+Use datasets edb_2018_10_24
+Assign average values to missing F points, 3 x features, 7 morphological fearures based on delineation, averaging
+scaling into [0, 1]
+ST 26916 and normal 21578.
+(48494, 11)
+(43644, 10) (4850, 10) (43644,) (4850,)
+SVM, 0.7074226804123711; KNN(5), 0.9183505154639175; RF(500): 0.952577319588
+*SVM, 0.8915463917525773 (without min max scaling!)
+
+2018.10.25 16:16
+3 x features, 7 morphological fearures based on delineation,
+12 morphological features without delineation, all averaging
+ST 26916 and normal 21578.
+(48494, 23)
+(43644, 22) (4850, 22) (43644,) (4850,)
+SVM: 0.549072164948
+KNN(5) 0.54
+RF(500): 0.971958762887
+
+2018.10.25 16:16
+3 x features, 7 morphological fearures based on delineation,
+12 morphological features without delineation, all averaging
+ST 26916 and normal 21578.
+(48494, 23)
+scaling into [0, 1]
+select 10 important feature: !!!
+x_2, x_3, pq_il, qrs_vl, st20_vl, qrs_argmaxl, qrs_argminl, qrs_minl, qrs_max_minl, qrs_al
+feature importance:[ 0.26562158  0.08491907  0.07228213  0.05878899  0.16255942  0.04720761
+0.0477667   0.08672827  0.07185522  0.10227101]
+(43644, 10) (4850, 10) (43644,) (4850,)
+SVM: 0.716701030928
+KNN(5) 0.929896907216
+RF(500): 0.962474226804
+
+2018.10.27 12:00
+3 x features, 7 morphological fearures based on delineation, 12 morphological features without delineation,
+3 fft features, 3 stft features, (spectral features are same for each episodes), all averaging
+ST 26916 and normal 21578.
+(48494, 29)
+select features:
+x_2, x_3, pq_il, qrs_vl, st20_vl, qrs_minl, qrs_max_minl, qrs_al, stft_median, stft_max
+(43644, 10) (4850, 10) (43644,) (4850,)
+SVM: 0.713195876289
+KNN(5) 0.994432989691
+RF(500): 0.999793814433
+
+2018.10.31 23:57
+3 x features, 7 morphological fearures based on delineation, 12 morphological features without delineation,
+3 fft features, 3 stft features, all averaging
+ST 26916 and normal 21578.
+(48494, 29)
+select features: 15
+x_2, x_3, pq_il, qrs_vl, st20_vl, qrs_argminl, qrs_minl, qrs_max_minl, qrst_al,
+fft_f1l, fft_f2l, fft_f3l, stft_meanl, stft_medianl, stft_maxl
+(43644, 15) (4850, 15) (43644,) (4850,)
+SVM: 0.693608247423
+KNN(5) 0.971546391753
+RF(100): 0.985360824742
+
+2018.11.1, 8:50
+3 x features, 7 morphological fearures based on delineation, 12 morphological features without delineation,
+3 fft features, 3 stft features, all averaging
+ST 26916 and normal 21578.
+(48494, 29)
+select features: 5
+qrst_al, fft_f3l, stft_meanl, stft_medianl, stft_maxl
+SVM: 0.706804123711
+KNN(5) 0.938556701031
+RF(100): 0.939587628866
+
+2018.11.1 9:15
+3 x features, 7 morphological fearures based on delineation, 12 morphological features without delineation,
+3 fft features, 3 stft features, all averaging
+ST 26916 and normal 21578.
+(48494, 29)
+select features: 10
+pq_il, st20_vl, qrs_minl, qrst_al, fft_f1l, fft_f2l, fft_f3l, stft_meanl, stft_medianl, stft_maxl
+(43644, 10) (4850, 10) (43644,) (4850,)
+SVM: 0.707216494845
+KNN(5) 0.963298969072
+RF(100): 0.971134020619
+
+2018.11.8 13.11
+3 x features, 7 morphological fearures based on delineation, 12 morphological features without delineation,
+3 fft features, 3 stft features, no averaging
+(242064, 29)
+selected features:
+pq_il, st20_vl, qrs_minl, qrst_al, fft_f1l, fft_f2l, fft_f3l, stft_meanl, stft_medianl, stft_maxl
+(193651, 10) (24206, 10) (24207, 10) (193651,) (24206,) (24207,)
+KNN(10) 0.937208245549
+RF(100): 0.959267980336
+
